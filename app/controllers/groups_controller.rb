@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
       @groups = Meetup::SearchGroupsService.new({
         text: @search_text,
         location: LOCATION
-      }).search
+      }).run!.take(10)
     end
   end
 

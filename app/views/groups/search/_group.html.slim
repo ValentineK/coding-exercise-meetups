@@ -2,7 +2,8 @@
   .column-3
     = image_tag group[:thumbnail_photo] if group[:thumbnail_photo].present?
   .column-9
-    .name= group[:name]
+    .name
+      = link_to group[:name], group_events_index_path({group_urlname: group[:urlname]})
     .location= group[:location]
     .status= group[:status]
     .category= group[:category]

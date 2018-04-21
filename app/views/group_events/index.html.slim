@@ -1,0 +1,6 @@
+.past-events
+  h3 Past events
+  h4.meetup_name
+
+  - @events.each do |event|
+    = render partial: 'group_events/index/event', locals: { event: event }
