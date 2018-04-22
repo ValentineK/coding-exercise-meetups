@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'redis', '~> 4.0'
+
 gem 'slim-rails'
 gem 'jquery-rails'
 

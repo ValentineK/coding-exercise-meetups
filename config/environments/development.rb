@@ -17,15 +17,18 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
-    config.cache_store = :memory_store
-    config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
-    }
+    config.cache_store = :redis_cache_store
   else
     config.action_controller.perform_caching = false
 
     config.cache_store = :null_store
   end
+
+  config.public_file_server.headers = {
+    'Cache-Control' => 'no-cache, no-store, must-revalidate',
+    'Pragma' => 'no-cache',
+    'Expires' => '0'
+  }
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
