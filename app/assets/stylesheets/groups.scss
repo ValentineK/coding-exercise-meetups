@@ -1,3 +1,41 @@
-// Place all the styles related to the groups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.search-results {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.group-item {
+  height: 80px;
+  max-width: 500px;
+
+  .thumbnail {
+    float: left;
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+    img {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .description {
+    padding-top: 10px;
+    height: 70px;
+    max-width: 410px;
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+.events {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+

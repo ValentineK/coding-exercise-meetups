@@ -8,7 +8,8 @@ module MeetupService
     if response.status == 200
       map_parsed_response(parse_response(response))
     else
-      raise Exception.new('something bad happened!')
+      raise Exception.new('Unexpected respond from Meetup API Host')
+      # TODO: Extend the error description
     end
   end
 

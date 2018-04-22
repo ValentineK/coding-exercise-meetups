@@ -1,0 +1,20 @@
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.query-input {
+  width: 600px;
+}

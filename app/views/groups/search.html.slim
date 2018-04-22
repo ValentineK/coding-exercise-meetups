@@ -1,11 +1,12 @@
-h1 Meetups client
-= form_with url: search_path, method: :get, local: true do |form|
-  = form.text_field :text, value: @search_text
-  = form.submit name: nil
+h1.center-text Meetups client
+= form_with url: search_path, method: :get, local: true, skip_enforcing_utf8: true do |form|
+  = form.text_field :query, value: @search_text, class: 'query-input'
+  = form.submit 'Search', name: nil
 
-- if @groups.present?
-  .row.groups-list
-    - @groups.each do |group|
-      = render partial: 'groups/search/group', locals: {group: group}
+.search-results
+  - if @groups.present?
+    .row.groups-list
+      - @groups.each do |group|
+        = render partial: 'groups/search/group', locals: { group: group }
 
-  .events-replacable
+    .events

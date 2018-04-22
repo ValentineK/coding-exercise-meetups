@@ -1,0 +1,21 @@
+// Place all the styles related to the group_events controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.past-events {
+  margin-top: 0;
+  position: relative;
+  border: 1px solid #333333;
+
+  .destroy-past-events {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .events-item {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #333333;
+  }
+}

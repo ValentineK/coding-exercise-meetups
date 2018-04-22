@@ -16,15 +16,3 @@
 //= require turbolinks
 //= require_tree .
 
-
-(function($, window, document) {
-  $(function() {
-      console.log('pass')
-    $('.name a').on('click', function() {
-      $.get(this.href, data, function(data) {
-        $('.events-replacable').html(data);
-      });
-      return false;
-    });
-  });
-})

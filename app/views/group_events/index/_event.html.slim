@@ -1,10 +1,10 @@
-.row
-  p.date-time
-    = event[:date]
-    = event[:time]
-.row
-  p.venue-name
-    = event[:venue_name]
-.row
-  p.rsvp-count
-    = event[:yes_rsvp_count]
+.events-item
+  .row
+    p.date-time
+      = [event[:date], event[:time]].join(' ')
+  .row
+    p.venue-name
+      = event[:venue_name]
+  .row
+    p.rsvp-count
+      = event[:yes_rsvp_count]

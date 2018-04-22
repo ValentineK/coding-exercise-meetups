@@ -1,9 +1,8 @@
-.row
-  .column-3
+.row.group-item.clearfix
+  .thumbnail
     = image_tag group[:thumbnail_photo] if group[:thumbnail_photo].present?
-  .column-9
+  .description
     .name
       = link_to group[:name], group_events_index_path({group_urlname: group[:urlname]})
+    .category-and-status= [group[:category], group[:status]].join(', ')
     .location= group[:location]
-    .status= group[:status]
-    .category= group[:category]
