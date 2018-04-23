@@ -1,8 +1,19 @@
 jQuery ->
+  events = $('.search-results .events')
+
+  close_events = () ->
+    events.find('.events-list').empty()
+    events.hide()
+
   $('.name a').on 'click', (event, element) ->
-    $('.search-results .events').html('')
+    close_events()
     group_name_text = @text
-    $.get this.href, (data) ->
-      $('.search-results .events').html(data)
-      $('.search-results .events .meetup_name').html(group_name_text)
+    $.get @href, (data) ->
+      events.find('.events-list').html(data)
+      events.find('.meetup_name').text(group_name_text)
+      events.show()
+    false
+
+  $('.search-results .destroy-past-events').click () ->
+    close_events()
     false

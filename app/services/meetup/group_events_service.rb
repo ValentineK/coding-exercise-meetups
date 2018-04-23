@@ -1,6 +1,4 @@
-class Meetup::GroupEventsService
-
-  include ::MeetupService
+class Meetup::GroupEventsService < Meetup::Base
 
   def initialize(params)
     @group_urlname = params[:group_urlname]

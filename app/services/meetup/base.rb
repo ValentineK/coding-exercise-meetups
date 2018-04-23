@@ -1,4 +1,4 @@
-module MeetupService
+class Meetup::Base
 
   API_HOST = 'https://api.meetup.com'
   API_KEY = ENV['MEETUP_API_KEY']
@@ -18,7 +18,6 @@ module MeetupService
 
   def connection
     Faraday.new url: API_HOST do |faraday|
-      faraday.response :logger
       faraday.adapter Faraday.default_adapter
     end
   end

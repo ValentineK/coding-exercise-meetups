@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
 
   LOCATION = 'Munich'
 
-  def search
+  def index
     @search_text = permitted_params[:query]
     unless @search_text.nil?
       @groups = Meetup::SearchGroupsService.new({

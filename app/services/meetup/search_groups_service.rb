@@ -1,6 +1,4 @@
-class Meetup::SearchGroupsService
-
-  include ::MeetupService
+class Meetup::SearchGroupsService < Meetup::Base
 
   def initialize(params)
     @location = params[:location]
