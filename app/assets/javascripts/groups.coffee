@@ -1,3 +1,9 @@
+# I find this idea to load the whole partial to show the events not the ideal. I remember
+# we spoke on the interview about messaging system in RoR, and during preparing to the
+# task I saw different options to approach with events, but I realized that It is better
+# to make it done with the way that I already know due I had a limited time.
+# As minimum it works
+
 jQuery ->
   events = $('.search-results .events')
 
